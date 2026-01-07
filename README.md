@@ -15,6 +15,8 @@
 ```txt
 NEXT_PUBLIC_API_ACCESS_KEY = 'xxxxx'
 NEXT_PUBLIC_API_ICONIFY_URL = 'https://api.iconify.design'
+# cloudflare analytics，不用请注释 src/app/layout.tsx 中的 Script
+NEXT_PUBLIC_CLOUDFLARE_ANALYTICS_TOKEN = 'xxxxx'
 ```
 
 NEXT_PUBLIC_API_ACCESS_KEY 即 unsplash api，需要到官网申请 https://unsplash.com/developers
