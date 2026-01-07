@@ -22,7 +22,7 @@ const UnsplashSearch: React.FC<UnsplashSearchProps> = ({ largeImgPreview, onImag
         unsplashUrl: image.urls.regular
       }
     })
-    
+
     // 如果有回调函数，调用它
     if (onImageSelect) {
       onImageSelect()
@@ -71,10 +71,7 @@ const UnsplashSearch: React.FC<UnsplashSearchProps> = ({ largeImgPreview, onImag
               onChange={(e) => setText(e.target.value)}
               onKeyDown={handleKeyDown}
             />
-            <Button 
-              className='cursor-pointer px-6' 
-              onClick={searchImage}
-            >
+            <Button className='cursor-pointer px-6' onClick={searchImage}>
               <Search className='w-4 h-4 mr-2 hidden md:block' />
               搜索
             </Button>
@@ -84,30 +81,22 @@ const UnsplashSearch: React.FC<UnsplashSearchProps> = ({ largeImgPreview, onImag
 
       {/* 分页控制 */}
       <div className='flex items-center justify-center gap-2'>
-        <Button 
-          className='cursor-pointer px-4 py-2' 
+        <Button
+          className='cursor-pointer px-4 py-2'
           variant='outline'
-          disabled={unsplashParam.page === 1} 
-          onClick={() => setUnsplashParam({ ...unsplashParam, page: 1 })}
-        >
+          disabled={unsplashParam.page === 1}
+          onClick={() => setUnsplashParam({ ...unsplashParam, page: 1 })}>
           首页
         </Button>
         <Button
           className='cursor-pointer px-4 py-2'
           variant='outline'
           disabled={unsplashParam.page === 1}
-          onClick={() => setUnsplashParam({ ...unsplashParam, page: unsplashParam.page > 1 ? unsplashParam.page - 1 : 1 })}
-        >
+          onClick={() => setUnsplashParam({ ...unsplashParam, page: unsplashParam.page > 1 ? unsplashParam.page - 1 : 1 })}>
           上页
         </Button>
-        <span className='px-4 py-2 text-sm text-gray-600 bg-gray-100 rounded-md'>
-          第 {unsplashParam.page} 页
-        </span>
-        <Button 
-          className='cursor-pointer px-4 py-2' 
-          variant='outline'
-          onClick={() => setUnsplashParam({ ...unsplashParam, page: unsplashParam.page + 1 })}
-        >
+        <span className='px-4 py-2 text-sm text-gray-600 bg-gray-100 rounded-md'>第 {unsplashParam.page} 页</span>
+        <Button className='cursor-pointer px-4 py-2' variant='outline' onClick={() => setUnsplashParam({ ...unsplashParam, page: unsplashParam.page + 1 })}>
           下页
         </Button>
       </div>
@@ -119,15 +108,14 @@ const UnsplashSearch: React.FC<UnsplashSearchProps> = ({ largeImgPreview, onImag
             return (
               <div
                 key={image.id}
-                className={`group rounded-xl relative cursor-pointer bg-gray-100 ${largeImgPreview ? 'aspect-[4/3]' : 'aspect-square'}`}
-                onClick={() => selectImage(image)}
-              >
-                <UnsplashImage src={image.urls.regular} alt={image.alt_description} user={image.user} links={image.links}/>
+                className={`group rounded-xl relative cursor-pointer bg-gray-100 ${largeImgPreview ? 'aspect-4/3' : 'aspect-square'}`}
+                onClick={() => selectImage(image)}>
+                <UnsplashImage src={image.urls.regular} alt={image.alt_description} user={image.user} links={image.links} />
               </div>
             )
           })}
         </div>
-        
+
         {/* 空状态 */}
         {imageList.length === 0 && (
           <div className='flex flex-col items-center justify-center h-64 text-gray-500'>
