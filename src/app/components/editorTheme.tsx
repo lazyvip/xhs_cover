@@ -1,9 +1,9 @@
 'use client'
 
 import { useContext } from 'react'
-import Image from 'next/image'
 import { CoverContext } from './coverContext'
 import { THEMES } from '../settings/themes'
+import ThemePreview from './ThemePreview'
 
 const EditorTheme = () => {
   const { coverSetting, setCoverSetting } = useContext(CoverContext)
@@ -11,7 +11,7 @@ const EditorTheme = () => {
   return (
     <div className='h-full w-full overflow-y-auto p-4'>
       <h2 className='text-lg font-bold text-center mb-4'>主题选择</h2>
-      <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-1 2xl:grid-cols-2 gap-4'>
+      <div className='grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-1 2xl:grid-cols-2 gap-4'>
         {THEMES.map((item) => (
           <div
             className={`${
@@ -19,8 +19,8 @@ const EditorTheme = () => {
             } flex flex-col items-center justify-center border border-gray-200 p-1 overflow-hidden rounded-lg cursor-pointer border-hover duration-100`}
             key={item.label}
             onClick={() => setCoverSetting({ ...coverSetting, theme: item })}>
-            <div className='relative'>
-              <Image src={item.preview.src} width={100} height={60} alt={item.label} />
+            <div className='relative w-full h-full flex flex-col justify-between items-center'>
+              <ThemePreview theme={item.value} />
             </div>
             <div className='text-sm text-center text-gray-600 font-bold whitespace-nowrap'>{item.label}</div>
           </div>

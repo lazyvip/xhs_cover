@@ -67,10 +67,10 @@ const BackgroundSelect = () => {
           <DialogTrigger asChild>
             <Button className='cursor-pointer'>渐变</Button>
           </DialogTrigger>
-          <DialogContent className='max-w-4xl! w-[90vw] max-h-[90vh] flex flex-col overflow-hidden bg-gradient-to-br from-white to-gray-50'>
+          <DialogContent className='max-w-4xl! w-[90vw] max-h-[90vh] flex flex-col overflow-hidden bg-linear-to-br from-white to-gray-50'>
             <DialogHeader className='border-b border-gray-100 pb-4'>
               <DialogTitle className='text-2xl font-bold text-gray-800 flex items-center gap-2'>
-                <div className='w-8 h-8 bg-gradient-to-r from-pink-500 to-violet-600 rounded-lg flex items-center justify-center'>
+                <div className='w-8 h-8 bg-linear-to-r from-pink-500 to-violet-600 rounded-lg flex items-center justify-center'>
                   <Palette className='w-4 h-4 text-white' />
                 </div>
                 选择渐变色背景
@@ -86,7 +86,7 @@ const BackgroundSelect = () => {
           <DialogTrigger asChild>
             <Button className='cursor-pointer'>在线</Button>
           </DialogTrigger>
-          <DialogContent className='max-w-4xl! w-[90vw] max-h-[90vh] flex flex-col overflow-hidden bg-gradient-to-br from-white to-gray-50'>
+          <DialogContent className='max-w-4xl! w-[90vw] max-h-[90vh] flex flex-col overflow-hidden bg-linear-to-br from-white to-gray-50'>
             <DialogHeader className='border-b border-gray-100 pb-4'>
               <DialogTitle className='text-2xl font-bold text-gray-800 flex items-center gap-2'>
                 <div className='w-8 h-8 bg-primary rounded-lg flex items-center justify-center'>
@@ -94,7 +94,13 @@ const BackgroundSelect = () => {
                 </div>
                 选择在线背景图片
               </DialogTitle>
-              <p className='text-sm text-gray-600 mt-2'>从 <a className='text-primary' href="https://unsplash.com/" target='_blank'>Unsplash</a> 精选高质量图片作为封面背景</p>
+              <p className='text-sm text-gray-600 mt-2'>
+                从{' '}
+                <a className='text-primary' href='https://unsplash.com/' target='_blank'>
+                  Unsplash
+                </a>{' '}
+                精选高质量图片作为封面背景
+              </p>
             </DialogHeader>
             <UnsplashSearch largeImgPreview={true} onImageSelect={handleUnsplashSelect} />
           </DialogContent>
@@ -111,7 +117,6 @@ const BackgroundSelect = () => {
           />
           <Button className='cursor-pointer'>上传</Button>
         </div>
-        
       </div>
     </div>
   )

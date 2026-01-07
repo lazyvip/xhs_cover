@@ -1,48 +1,33 @@
-import backgroundThemePlaceholder from '../assets/images/background-theme-placeholder.webp'
-import basicThemePlaceholder from '../assets/images/basic-theme-placeholder.webp'
-import modernThemePlaceholder from '../assets/images/modern-theme-placeholder.webp'
-import stylishThemePlaceholder from '../assets/images/stylish-theme-placeholder.webp'
-import outlineThemePlaceholder from '../assets/images/outline-theme-placeholder.webp'
-import previewThemePlaceholder from '../assets/images/preview-theme-placeholder.webp'
-import mobileThemePlaceholder from '../assets/images/mobile-theme-placeholder.webp'
-
 export const THEMES: Theme[] = [
   {
     label: '简洁',
-    value: 'outline',
-    preview: outlineThemePlaceholder
+    value: 'outline'
   },
   {
     label: '现代',
-    value: 'modern',
-    preview: modernThemePlaceholder
+    value: 'modern'
   },
   {
     label: '经典',
-    value: 'basic',
-    preview: basicThemePlaceholder
+    value: 'basic'
   },
   {
     label: '背景',
-    value: 'background',
-    preview: backgroundThemePlaceholder
+    value: 'background'
   },
   {
     label: '图文',
     value: 'stylish',
-    preview: stylishThemePlaceholder,
     swapX: false
   },
   {
     label: '桌面',
     value: 'preview',
-    preview: previewThemePlaceholder,
     stretchY: false
   },
   {
     label: '手机',
     value: 'mobile',
-    preview: mobileThemePlaceholder,
     swapX: false,
     stretchY: false
   }

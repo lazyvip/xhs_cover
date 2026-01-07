@@ -61,7 +61,7 @@ const GradientSelect: React.FC<GradientSelectProps> = ({ onGradientSelect }) => 
             return (
               <div
                 key={index}
-                className={`group flex items-center justify-center relative cursor-pointer rounded-xl aspect-[4/3]`}
+                className={`group flex items-center justify-center relative cursor-pointer rounded-xl aspect-4/3`}
                 style={{ background: gradient.value }}
                 onClick={() => selectGradient(gradient.value)}>
                 {/* 选中状态 */}

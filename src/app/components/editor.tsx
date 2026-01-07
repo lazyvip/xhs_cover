@@ -80,7 +80,7 @@ const Editor = () => {
             <EditorPreview />
           </div>
           <Separator orientation='vertical' />
-          <div className='h-full w-[120px] xl:w-[140px] 2xl:w-[300px]'>
+          <div className='h-full w-[120px] xl:w-[160px] 2xl:w-[280px]'>
             <EditorTheme />
           </div>
         </div>
