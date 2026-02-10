@@ -19,7 +19,9 @@ export default function Main() {
   const { applyTemplate } = useContext(CoverContext)
 
   const handleUseTemplate = (templateData: Setting) => {
-    applyTemplate(templateData)
+    // 确保 templateData 是一个普通对象
+    const data = JSON.parse(JSON.stringify(templateData));
+    applyTemplate(data)
     router.push('/editor')
   }
 
@@ -27,7 +29,7 @@ export default function Main() {
     <div className='pt-14 w-full flex flex-col items-center'>
       <section className='w-full px-4 md:px-12 pt-16 flex flex-col items-center gap-6 graph-paper-primary'>
         <div className='font-bold text-center'>
-          <h1 className='text-5xl md:text-6xl font-extrabold'>ThisCover</h1>
+          <h1 className='text-5xl md:text-6xl font-extrabold'>懒人封面生成器</h1>
           <h2 className='text-3xl md:text-4xl font-bold mt-4'>
             一个 <span className='underline decoration-wavy decoration-red-400 underline-offset-6'>免费、漂亮</span> 的{' '}
             <span className='text-primary'>封面生成器</span>
@@ -193,6 +195,10 @@ export default function Main() {
               <AccordionTrigger className='text-md'>无法下载、无法复制？</AccordionTrigger>
               <AccordionContent>图片下载、复制功能基本支持主流浏览器，请查看浏览器版本是否过低 或者 最好使用最新版chrome浏览器</AccordionContent>
             </AccordionItem>
+            <AccordionItem value='item-6'>
+              <AccordionTrigger className='text-md'>来源说明</AccordionTrigger>
+              <AccordionContent>感谢weizwz，rutikwankhade的开源代码，本站点基于二位作者的开源内容进行部署</AccordionContent>
+            </AccordionItem>
           </Accordion>
         </div>
       </section>
@@ -244,9 +250,9 @@ export default function Main() {
 
       <footer className='w-full px-4 md:px-12 py-12 flex flex-col items-center gap-4'>
         <p>
-          Copyright © 2025{new Date().getFullYear() === 2025 ? '' : '-' + new Date().getFullYear()}
-          <a className='font-bold text-primary ml-2' target='_blank' href='https://note.weizwz.com/'>
-            weizwz
+          Powered by LazyCover & LazySo Labs.{' '}
+          <a className='font-bold text-primary ml-1' target='_blank' href='https://lazyso.com'>
+            探索更多流量变现玩法 -&gt; [LazySo 主站]
           </a>
         </p>
         <div className='flex flex-wrap items-center justify-center gap-2'>
@@ -271,7 +277,7 @@ export default function Main() {
           <a target='_blank' href='https://unsplash.com/developers' title='本站图片API使用 unsplash'>
             <img alt='unsplash' src='https://img.shields.io/badge/Image API-unsplash-000000?logo=unsplash&amp;logoColor=fff' />
           </a>
-          <a target='_blank' href='https://github.com/weizwz' title='本站代码托管于 Github'>
+          <a target='_blank' href='https://github.com/lazyvip/xhs_cover' title='本站代码托管于 Github'>
             <img alt='Github' src='https://img.shields.io/badge/Code-Github-432DD7?logo=github&amp;logoColor=fff' />
           </a>
           <a target='_blank' href='https://vercel.com/' title='本站部署于 Vercel'>

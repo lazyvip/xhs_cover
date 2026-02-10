@@ -1,10 +1,10 @@
 import { createApi } from 'unsplash-js'
 
-const key = process.env.NEXT_PUBLIC_API_ACCESS_KEY
+const key = process.env.NEXT_PUBLIC_API_ACCESS_KEY || 'dummy_key'
 
-if (!key) {
-  throw new Error('NEXT_PUBLIC_API_ACCESS_KEY is not defined')
-}
+// if (!key) {
+//   throw new Error('NEXT_PUBLIC_API_ACCESS_KEY is not defined')
+// }
 
 const unsplash = createApi({
   accessKey: key

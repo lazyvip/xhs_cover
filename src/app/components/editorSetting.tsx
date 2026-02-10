@@ -7,6 +7,7 @@ import { Label } from '@/components/ui/label'
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Slider } from '@/components/ui/slider'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { HelpCircle, RotateCcw, Save } from 'lucide-react'
 
 import { useContext, useEffect, useState } from 'react'
@@ -315,6 +316,23 @@ const EditorSetting = () => {
           </div>
         </div>
       </form>
+
+      {/* Insider Card */}
+      <div className='px-4 mb-4'>
+        <a href='https://lazyso.com/insider' target='_blank' className='block'>
+          <Card className='bg-gradient-to-r from-amber-50 to-orange-50 border-orange-100 hover:shadow-md transition-shadow cursor-pointer'>
+            <CardHeader className='p-4'>
+              <CardTitle className='text-sm text-orange-800 flex items-center gap-2'>
+                🚀 让点击率翻倍？
+              </CardTitle>
+              <CardDescription className='text-xs text-orange-700 mt-1'>
+                一张好封面能提升 300% 的 CTR。LazySo Insider 社群已拆解《爆款封面设计与流量底层逻辑》，教你用图骗点击。
+              </CardDescription>
+            </CardHeader>
+          </Card>
+        </a>
+      </div>
+
       <div className='flex justify-center items-center p-4'>
         <Button className='cursor-pointer mr-4' onClick={saveSetting}>
           <Save className='w-4 h-4 hidden md:block' />

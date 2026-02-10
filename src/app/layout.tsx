@@ -5,9 +5,9 @@ import './assets/css/patterns.css'
 import { CoverProvider } from './components/coverContext'
 
 export const metadata: Metadata = {
-  title: 'ThisCover 封面生成器',
-  description: '免费、漂亮的封面生成器',
-  keywords: ['ThisCover', '封面生成器', 'Cover Generator', '免费设计', '公众号封面', '文章配图', '设计工具', '在线设计', 'weizwz', '唯知笔记', '唯知为之'],
+  title: 'LazyCover 懒人封面 - 程序员/自媒体必备的极简封面生成器 | LazySo',
+  description: 'LazySo 旗下免费工具。一键生成技术博客、公众号、Notion 封面图。支持自定义背景、字体与图标，无需设计基础，纯前端生成。',
+  keywords: ['懒人封面', 'LazyCover', 'LazySo', '封面生成器', 'Cover Generator', '免费设计', '公众号封面', '文章配图', '设计工具', '在线设计', '懒人笔记'],
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
