@@ -47,8 +47,7 @@ export default function Main() {
               <Button 
                 onClick={() => handleUseTemplate(HomeCovers[0].data)}
                 size='sm'
-                variant='outline'
-                className='w-1/3 h-6 rounded cursor-pointer border-gray-100 text-gray-400 hover:text-gray-500'
+                className='w-1/3 font-medium py-2 rounded-md cursor-pointer'
               >
                 使用此模版
               </Button>
@@ -62,8 +61,7 @@ export default function Main() {
               <Button 
                 onClick={() => handleUseTemplate(HomeCovers[1].data)}
                 size='sm'
-                variant='outline'
-                className='w-1/3 h-6 rounded cursor-pointer border-gray-100 text-gray-400 hover:text-gray-500'
+                className='w-1/3 font-medium py-2 rounded-md cursor-pointer'
               >
                 使用此模版
               </Button>
@@ -77,8 +75,7 @@ export default function Main() {
               <Button 
                 onClick={() => handleUseTemplate(HomeCovers[2].data)}
                 size='sm'
-                variant='outline'
-                className='flex-1 ml-2 h-6 rounded cursor-pointer border-gray-100 text-gray-400 hover:text-gray-500'
+                className='flex-1 ml-2 font-medium py-2 rounded-md cursor-pointer'
               >
                 使用此模版
               </Button>

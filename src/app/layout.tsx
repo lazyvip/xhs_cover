@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`antialiased`}>
+      <body className={`antialiased`} suppressHydrationWarning>
         <CoverProvider>{children}</CoverProvider>
         {/* cloudflare analytics，不用请注释 */}
         {process.env.NODE_ENV === 'production' && (
