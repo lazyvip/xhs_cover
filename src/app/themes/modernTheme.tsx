@@ -4,7 +4,7 @@ import { useContext } from 'react'
 import { CoverContext } from '../components/coverContext'
 import { getBackgroundStyle, shouldShowPattern } from '../tools/backgroundUtils'
 
-const iconifyHost = process.env.NEXT_PUBLIC_API_ICONIFY_URL
+const iconifyHost = process.env.NEXT_PUBLIC_API_ICONIFY_URL || 'https://api.iconify.design'
 
 const ModernTheme: React.FC<ThemeProps> = ({ config }) => {
   const { title, pattern, author, icon, font, customIcon, size } = config

@@ -11,7 +11,7 @@ import { CoverContext } from './coverContext'
 import { throttle } from '../tools/utils'
 
 // 设置Iconify API的URL
-const iconifyHost = process.env.NEXT_PUBLIC_API_ICONIFY_URL
+const iconifyHost = process.env.NEXT_PUBLIC_API_ICONIFY_URL || 'https://api.iconify.design'
 
 // 自定义label显示
 const FormatOptionLabel = ({ icon }: { icon: IconOption }) => {

@@ -6,7 +6,7 @@ import { X } from 'lucide-react'
 import { CoverContext } from '../components/coverContext'
 import { getBackgroundStyle, hasBackgroundImage, shouldShowPattern } from '../tools/backgroundUtils'
 
-const iconifyHost = process.env.NEXT_PUBLIC_API_ICONIFY_URL
+const iconifyHost = process.env.NEXT_PUBLIC_API_ICONIFY_URL || 'https://api.iconify.design'
 
 const BackgroundTheme: React.FC<ThemeProps> = ({ config }) => {
   const { title, author, icon, font, customIcon, pattern } = config

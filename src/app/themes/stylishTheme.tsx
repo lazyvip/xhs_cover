@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 import { X } from 'lucide-react'
 import { CoverContext } from '../components/coverContext'
 
-const iconifyHost = process.env.NEXT_PUBLIC_API_ICONIFY_URL
+const iconifyHost = process.env.NEXT_PUBLIC_API_ICONIFY_URL || 'https://api.iconify.design'
 
 const StylishTheme: React.FC<ThemeProps> = ({ config }) => {
   const { title, author, icon, font, customIcon, theme, pattern } = config
