@@ -32,6 +32,18 @@ export default function RootLayout({
     <html lang='en'>
       <body className={`antialiased`} suppressHydrationWarning>
         <CoverProvider>{children}</CoverProvider>
+        {/* 百度统计 */}
+        <Script id="baidu-tongji" strategy="afterInteractive">
+          {`
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?62e0e896c4d9e87fc6d6c5a056cce08f";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+          `}
+        </Script>
         {/* cloudflare analytics，不用请注释 */}
         {process.env.NODE_ENV === 'production' && (
           <Script
