@@ -52,7 +52,9 @@ const PromoWidget = () => {
         </button>
         <div className='px-5 py-4'>
           <div className='text-base font-bold mb-2'>🔥 别光顾着制作封面了，看看别人怎么用 AI 搞钱？</div>
-          <div className='text-sm text-white/80 mb-4'>别人已变现 + 本周 SOP 更新 + 看商业逻辑</div>
+          <div className='text-sm text-white/80 mb-4'>
+            LazySo内部社群已更新本周【AI工具/自媒体矩阵】的最新变现 SOP 与对标账号。别只做无情的做号机器，来看看底层的商业逻辑。
+          </div>
           <a
             href='https://lazyso.com/labs/?from=cover_make'
             target='_blank'
